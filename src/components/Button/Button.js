@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
+import './Button.scss';
 
 function Button(props) {
   const className = [props.className];

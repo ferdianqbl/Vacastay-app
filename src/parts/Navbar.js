@@ -2,10 +2,10 @@ import React from 'react';
 import IconText from './IconText';
 import Button from '../components/Button/Button';
 
-function Navbar(props) {
 
+function Navbar(props) {
   const getNavLinkClass = path => {
-    return props.location === path ? " active" : "";
+    return props.location === path ? " active" : ""
   }
 
   return (
@@ -22,17 +22,17 @@ function Navbar(props) {
                 Home
               </Button>
             </li>
-            <li className={`nav-item`}>
+            <li className={`nav-item${getNavLinkClass("/browse-by")}`}>
               <Button className="nav-link" type='link' href="/browse-by">
                 Browse by
               </Button>
             </li>
-            <li className={`nav-item`}>
+            <li className={`nav-item${getNavLinkClass("/stories")}`}>
               <Button className="nav-link" type='link' href="/stories">
                 Stories
               </Button>
             </li>
-            <li className={`nav-item`}>
+            <li className={`nav-item${getNavLinkClass("/agents")}`}>
               <Button className="nav-link" type='link' href="/agents">
                 Agents
               </Button>

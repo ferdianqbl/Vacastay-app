@@ -45,6 +45,15 @@
 @import "utilities/api";
 // scss-docs-end import-stack
 
+// my variables
+$my-primary-text:#B0B0B0;
+
+
+//=============================
+body {
+  font-family: Poppins, sans-serif;
+}
+
 .brand-text-icon {
   font-family: Poppins, sans-serif;
   font-style: normal;
@@ -66,6 +75,7 @@ nav#navbar {
   border-bottom: 1px solid #e0f3f0;
 
   .navbar-nav {
+    position: relative;
 
     li.nav-item {
 
@@ -75,12 +85,35 @@ nav#navbar {
           position: relative;
           color: $primary;
           font-weight: 500;
+
+          &::after {
+            content: "";
+            background-color: $primary;
+            position: absolute;
+            width: 60%;
+            height: 0.2rem;
+            bottom: .2rem;
+            left: 20%;
+            transition: .4s;
+            border-radius: 50px;
+          }
+
+          @media (max-width: 992px) {
+            &::after {
+              width: 0;
+            }
+          }
         }
       }
 
       a {
         &.nav-link {
           position: relative;
+          transition: .4s;
+
+          &:hover {
+            color: $primary;
+          }
         }
 
         &.nav-link::after {
@@ -99,10 +132,65 @@ nav#navbar {
           width: 60%;
         }
 
+        @media (max-width: 992px) {
+          &.nav-link:hover::after {
+            width: 0;
+          }
+        }
+
         &.nav-link {
           color: $secondary;
         }
       }
+    }
+  }
+}
+
+section.hero#hero {
+  padding-top: 4rem;
+
+  .container {
+    .row {
+      h1.hero-heading {
+        font-style: normal;
+        font-weight: bold;
+        line-height: 63px;
+
+        & span {
+          color: $primary;
+        }
+      }
+
+      p.hero-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        color: $my-primary-text;
+      }
+
+      p.text-icon {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        color: $my-primary-text;
+
+        & span {
+          font-weight: 500;
+          color: $secondary;
+        }
+      }
+
+      @media (max-width: 992px) {
+        &.hero-container {
+          flex-direction: column-reverse;
+
+          .img-hero {
+            margin-bottom: 3rem;
+            // width: 80%;
+          }
+        }
+      }
+
     }
   }
 }
