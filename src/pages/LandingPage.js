@@ -1,10 +1,16 @@
-import Header from 'parts/Header'
+import Navbar from 'parts/Navbar'
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 const LandingPage = () => {
+
+  const location = useLocation();
+
+  console.log(location);
+
   return (
     <>
-      <Header></Header>
+      <Navbar location={location.pathname}></Navbar>
     </>
   )
 }
