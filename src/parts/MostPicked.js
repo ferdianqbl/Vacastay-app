@@ -5,7 +5,7 @@ const MostPicked = (props) => {
   return (
     <section className="most-picked" id="most-picked" ref={props.refMostPicked}>
       <div className="container">
-        <h3 className="section-heading mb-3">Most Picked</h3>
+        <h3 className="section-heading">Most Picked</h3>
 
         <div className="container-grid sm">
           {props.data.map((item, index) => {
@@ -17,7 +17,7 @@ const MostPicked = (props) => {
                 <div className="card card-featured">
                   <div className="tag">
                     ${item.price}
-                    <span className="tag-price"> per {item.unit}</span>
+                    <span className="tag-text"> per {item.unit}</span>
                   </div>
 
                   <figure className="img-wrapper">
@@ -31,7 +31,7 @@ const MostPicked = (props) => {
                   <div className="meta-wrapper">
                     <Button
                       type="link"
-                      className="streched-link d-block text-white"
+                      className="stretched-link d-block text-white"
                       href={`/properties/${item._id}`}
                     >
                       <h5>{item.name}</h5>

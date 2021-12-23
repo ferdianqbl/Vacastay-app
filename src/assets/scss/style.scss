@@ -49,6 +49,10 @@
 // my variables
 $my-primary-text: #b0b0b0;
 
+.my-primary-text {
+  color: $my-primary-text;
+}
+
 //=============================
 body {
   font-family: Poppins, sans-serif;
@@ -163,7 +167,7 @@ nav#navbar {
     right: 0;
     font-weight: 500;
 
-    .tag-price {
+    .tag-text {
       font-weight: 300;
     }
   }
@@ -177,6 +181,7 @@ nav#navbar {
 
   .meta-wrapper {
     margin-top: 1rem;
+    margin-bottom: .5rem;
 
     h5 {
       font-size: 1.25rem;
@@ -186,6 +191,11 @@ nav#navbar {
 
     a {
       text-decoration: none;
+      transition: .5s;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     span {
@@ -261,7 +271,8 @@ section {
 
   h3.section-heading {
     font-weight: 600;
-    font-size: 1.875rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.875rem;
   }
 }
 

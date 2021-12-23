@@ -12,47 +12,47 @@
       "imageUrl": "/images/landing-page-most-picked/most-picked-1.png",
       "country": "South Korea",
       "city": "Seoul Flore",
-      "price": "80",
+      "price": "50",
       "unit": "night"
     },
     {
       "_id": "asd1293uasdads2",
-      "name": "The People House",
+      "name": "White Alesandria",
       "type": "Hotel",
       "imageUrl": "/images/landing-page-most-picked/most-picked-2.png",
       "country": "Indonesia",
-      "city": "Bogor",
-      "price": "52",
-      "unit": "night"
-    },
-    {
-      "_id": "asd1293uasdads3",
-      "name": "House Tour",
-      "type": "Rumah",
-      "imageUrl": "/images/landing-page-most-picked/most-picked-3.png",
-      "country": "South Korea",
-      "city": "Seoul Flore",
-      "price": "80",
+      "city": "Bandung",
+      "price": "67",
       "unit": "night"
     },
     {
       "_id": "asd1293uasdads4",
-      "name": "Jung Hook Sie",
+      "name": "Kosava Regona",
       "type": "Apartment",
       "imageUrl": "/images/landing-page-most-picked/most-picked-4.png",
-      "country": "South Korea",
-      "city": "Seoul Flore",
-      "price": "80",
+      "country": "Indonesia",
+      "city": "Malang",
+      "price": "60",
+      "unit": "night"
+    },
+    {
+      "_id": "asd1293uasdads3",
+      "name": "Alaska Horizon",
+      "type": "Rumah",
+      "imageUrl": "/images/landing-page-most-picked/most-picked-3.png",
+      "country": "Indonesia",
+      "city": "Surabaya",
+      "price": "66",
       "unit": "night"
     },
     {
       "_id": "asd1293uasdads5",
-      "name": "Jung Hook Sie",
+      "name": "Santos Sandrea",
       "type": "Apartment",
       "imageUrl": "/images/landing-page-most-picked/most-picked-5.png",
-      "country": "South Korea",
-      "city": "Seoul Flore",
-      "price": "80",
+      "country": "Indonesia",
+      "city": "Bogor",
+      "price": "58",
       "unit": "night"
     }
   ],
@@ -64,23 +64,23 @@
         {
           "_id": "asd1293uasdads1",
           "name": "PSW Antasari",
-          "imageUrl": "/images/image-category-1.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
-          "isPopular": true
-        },
-        {
-          "_id": "asd1293uasdads1",
-          "name": "Kuretakeso",
-          "imageUrl": "/images/image-category-2.jpg",
+          "imageUrl": "/images/landing-page-houseWithBackyard/house-with-backyard-1.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
+          "name": "Kuretakeso",
+          "imageUrl": "/images/landing-page-houseWithBackyard/house-with-backyard-2.png",
+          "country": "South Korea",
+          "city": "Seoul Flore",
+          "isPopular": true
+        },
+        {
+          "_id": "asd1293uasdads1",
           "name": "Arya Duta",
-          "imageUrl": "/images/image-category-3.jpg",
+          "imageUrl": "/images/landing-page-houseWithBackyard/house-with-backyard-3.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -88,7 +88,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Grand Dhika",
-          "imageUrl": "/images/image-category-4.jpg",
+          "imageUrl": "/images/landing-page-houseWithBackyard/house-with-backyard-4.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -102,7 +102,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "PSW Antasari",
-          "imageUrl": "/images/image-category-5.jpg",
+          "imageUrl": "/images/landing-page-hotels/hotels-largelivingroom-1.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -110,7 +110,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Kuretakeso",
-          "imageUrl": "/images/image-category-6.jpg",
+          "imageUrl": "/images/landing-page-hotels/hotels-largelivingroom-2.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -118,7 +118,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Arya Duta",
-          "imageUrl": "/images/image-category-7.jpg",
+          "imageUrl": "/images/landing-page-hotels/hotels-largelivingroom-3.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -126,7 +126,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Grand Dhika",
-          "imageUrl": "/images/image-category-8.jpg",
+          "imageUrl": "/images/landing-page-hotels/hotels-largelivingroom-4.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": true
@@ -140,15 +140,15 @@
         {
           "_id": "asd1293uasdads1",
           "name": "PSW Antasari",
-          "imageUrl": "/images/image-category-9.jpg",
+          "imageUrl": "/images/landing-page-apartments/apartments-with-kitchenset-1.png",
           "country": "South Korea",
           "city": "Seoul Flore",
-          "isPopular": false
+          "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
           "name": "Kuretakeso",
-          "imageUrl": "/images/image-category-10.jpg",
+          "imageUrl": "/images/landing-page-apartments/apartments-with-kitchenset-2.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -156,15 +156,15 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Arya Duta",
-          "imageUrl": "/images/image-category-11.jpg",
+          "imageUrl": "/images/landing-page-apartments/apartments-with-kitchenset-3.png",
           "country": "South Korea",
           "city": "Seoul Flore",
-          "isPopular": true
+          "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
           "name": "Grand Dhika",
-          "imageUrl": "/images/image-category-12.jpg",
+          "imageUrl": "/images/landing-page-apartments/apartments-with-kitchenset-4.png",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
