@@ -11,6 +11,7 @@
 @import "type";
 @import "images";
 @import "containers";
+@import "container-grid";
 @import "grid";
 @import "tables";
 @import "forms";
@@ -46,8 +47,7 @@
 // scss-docs-end import-stack
 
 // my variables
-$my-primary-text:#B0B0B0;
-
+$my-primary-text: #b0b0b0;
 
 //=============================
 body {
@@ -78,9 +78,7 @@ nav#navbar {
     position: relative;
 
     li.nav-item {
-
       &.active {
-
         a.nav-link {
           position: relative;
           color: $primary;
@@ -92,9 +90,9 @@ nav#navbar {
             position: absolute;
             width: 60%;
             height: 0.2rem;
-            bottom: .2rem;
+            bottom: 0.2rem;
             left: 20%;
-            transition: .4s;
+            transition: 0.4s;
             border-radius: 50px;
           }
 
@@ -109,7 +107,7 @@ nav#navbar {
       a {
         &.nav-link {
           position: relative;
-          transition: .4s;
+          transition: 0.4s;
 
           &:hover {
             color: $primary;
@@ -122,9 +120,9 @@ nav#navbar {
           position: absolute;
           width: 0;
           height: 0.2rem;
-          bottom: .2rem;
+          bottom: 0.2rem;
           left: 20%;
-          transition: .4s;
+          transition: 0.4s;
           border-radius: 50px;
         }
 
@@ -146,8 +144,142 @@ nav#navbar {
   }
 }
 
+.card {
+  height: 100%;
+  border: none;
+  overflow: hidden;
+  border-radius: 20px;
+
+  .tag {
+    position: absolute;
+    z-index: 3;
+    color: $white;
+    background-color: rgb(255, 145, 0);
+    padding: .25rem 1.25rem;
+    font-size: .875rem;
+    border: none;
+    border-radius: 0 15px;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+
+    .tag-price {
+      font-weight: 300;
+    }
+  }
+
+  .img-wrapper {
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: .9375rem;
+  }
+
+  .meta-wrapper {
+    margin-top: 1rem;
+
+    h5 {
+      font-size: 1.25rem;
+      margin-bottom: .25rem;
+      font-weight: 400;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+  }
+
+  &.card-featured {
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1.1);
+      transition: 0.5s transform ease-in-out;
+      z-index: 2;
+      @include gradient-y(rgba($black, 0), rgba($black, 0.51), 0%, 100%);
+    }
+
+    .img-wrapper {
+      position: absolute;
+      z-index: 1;
+      color: $white;
+      margin: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1.1);
+      transition: 0.5s transform ease-in-out;
+      border-radius: $border-radius;
+    }
+
+    .meta-wrapper {
+
+      z-index: 4;
+      color: $white;
+      padding: 1.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      transform: translateY(0);
+      transition: .3s transform ease-in-out;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+
+    &:hover {
+      .meta-wrapper {
+        transform: translateY(-5px);
+      }
+
+      &::after,
+      .img-wrapper {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+section {
+  margin-bottom: 4.375rem;
+
+  h3.section-heading {
+    font-weight: 600;
+    font-size: 1.875rem;
+  }
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 section.hero#hero {
   padding-top: 4rem;
+  margin-bottom: 6.25rem;
 
   .container {
     .row {
@@ -190,7 +322,6 @@ section.hero#hero {
           }
         }
       }
-
     }
   }
 }
