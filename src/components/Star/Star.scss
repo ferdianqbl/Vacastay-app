@@ -1,0 +1,22 @@
+.stars {
+  position: relative;
+  min-width: 200px;
+  display: inline-flex;
+
+  .star {
+    position: absolute;
+    z-index: 2;
+    display: inline-flex;
+    mask: url(../../assets/images/icons/ic_star.svg) no-repeat center left;
+
+    &:not(.placeholder) {
+      background-color: #FFD53F;
+      z-index: 2;
+    }
+
+    &.placeholder {
+      z-index: 1;
+      background-color: #747272;
+    }
+  }
+}

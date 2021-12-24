@@ -174,11 +174,11 @@
   ],
   "testimonial": {
     "_id": "asd1293uasdads1",
-    "imageUrl": "/images/testimonial-landingpages.jpg",
+    "imageUrl": "/images/landing-page-testimony/family_photo-main.png",
     "name": "Happy Family",
-    "rate": 4.55,
+    "rate": 4.5,
     "content": "What a great trip with my family and I should try again next time soon ...",
-    "familyName": "Angga",
-    "familyOccupation": "Product Designer"
+    "familyName": "Ferdian",
+    "familyOccupation": "Software Engineer"
   }
 }

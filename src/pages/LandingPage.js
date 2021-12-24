@@ -6,6 +6,7 @@ import Hero from 'parts/Hero';
 import landingPage from '../json/landingPage.json';
 import MostPicked from 'parts/MostPicked';
 import Categories from 'parts/Categories';
+import Testimony from 'parts/Testimony';
 
 const LandingPage = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const LandingPage = () => {
       <Hero data={landingPage.hero} refMostPicked={refMostPicked} />
       <MostPicked data={landingPage.mostPicked} refMostPicked={refMostPicked} />
       <Categories data={landingPage.categories} />
+      <Testimony data={landingPage.testimonial} />
     </>
   )
 }

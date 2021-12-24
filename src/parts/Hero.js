@@ -10,18 +10,14 @@ import IcTreasure from '../assets/images/icons/ic_treasure.svg';
 
 import Button from 'components/Button/Button';
 
-
-
 function Hero(props) {
 
   const showMostPicked = () => {
     window.scrollTo({
-      top: props.refMostPicked.current.offsetTop - 50,
+      top: props.refMostPicked.current.offsetTop - 100,
       behavior: "smooth"
     });
   }
-
-
 
   return (
     <section className="hero" id='hero'>

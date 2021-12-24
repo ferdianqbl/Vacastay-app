@@ -267,6 +267,7 @@ nav#navbar {
 }
 
 section {
+  padding-bottom: 6.25rem;
   margin-bottom: 4.375rem;
 
   h3.section-heading {
@@ -289,8 +290,7 @@ section {
 }
 
 section.hero#hero {
-  padding-top: 4rem;
-  margin-bottom: 6.25rem;
+  padding-top: 10rem;
 
   .container {
     .row {
@@ -331,6 +331,39 @@ section.hero#hero {
             margin-bottom: 3rem;
             // width: 80%;
           }
+        }
+      }
+    }
+  }
+}
+
+section.testimonial#testimonial {
+  .container {
+    .row {
+      .testimonial-hero {
+        margin-right: 4rem;
+      }
+
+      .testimonial-content {
+        margin-bottom: 2.5rem;
+
+        h4.testimonial-heading {
+          font-weight: 500;
+          font-size: 1.875rem;
+          margin-bottom: 2.5rem;
+        }
+
+        p.testimonial-text {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 2rem;
+        }
+
+        p.testimonial-name {
+          font-style: normal;
+          font-weight: 300;
+          font-size: 1.125rem;
+          color: $my-primary-text;
         }
       }
     }
