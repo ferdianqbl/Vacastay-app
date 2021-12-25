@@ -64,7 +64,7 @@ function Hero(props) {
             </Fade>
           </div>
           <div className="col-lg-6">
-            <Fade>
+            <Fade triggerOnce>
               <div className="img-hero">
                 <img src={ImgHeroMain} alt="img-hero" className="img-fluid" />
               </div>
