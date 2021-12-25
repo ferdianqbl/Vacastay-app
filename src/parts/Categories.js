@@ -1,17 +1,19 @@
 import Button from 'components/Button/Button'
 import React from 'react'
+import { Fade, Slide } from 'react-awesome-reveal'
+
 
 function Categories({ data }) {
-
   return (
     data.map((category, index1) => {
       return (
         <section className={`categories category-${index1}`} id={`categories category-${index1}`} key={`category-${index1}`}>
           <div className="container">
-            <h3 className="section-heading">
-              {category.name}
-            </h3>
-
+            <Slide delay={500 * index1} triggerOnce>
+              <h3 className="section-heading">
+                {category.name}
+              </h3>
+            </Slide>
             <div className="row align-items-center">
 
               {
@@ -22,31 +24,33 @@ function Categories({ data }) {
                     category.items.map((item, index2) => {
                       return (
                         <div className="col-lg-3" key={`category-${index1}-item-${index2}`}>
-                          <div className="card">
-                            {
-                              item.isPopular && (
-                                <div className="tag">
-                                  Popular <span className="tag-text">choice</span>
-                                </div>
-                              )
-                            }
+                          <Fade direction="up" delay={500 * index2} triggerOnce>
+                            <div className="card">
+                              {
+                                item.isPopular && (
+                                  <div className="tag">
+                                    Popular <span className="tag-text">choice</span>
+                                  </div>
+                                )
+                              }
 
-                            <figure className="img-wrapper">
-                              <img
-                                src={item.imageUrl}
-                                alt={item.name}
-                                className="img-cover"
-                              />
-                            </figure>
+                              <figure className="img-wrapper">
+                                <img
+                                  src={item.imageUrl}
+                                  alt={item.name}
+                                  className="img-cover"
+                                />
+                              </figure>
 
-                            <div className="meta-wrapper">
-                              <Button type="link" href={`/properties/${item._id}`} className="stretched-link d-block text-secondary pe-2">
-                                <h5>{item.name}</h5>
-                              </Button>
+                              <div className="meta-wrapper">
+                                <Button type="link" href={`/properties/${item._id}`} className="stretched-link d-block text-secondary pe-2">
+                                  <h5>{item.name}</h5>
+                                </Button>
 
-                              <span className="my-primary-text pe-2">{item.city}, {item.country}</span>
+                                <span className="my-primary-text pe-2">{item.city}, {item.country}</span>
+                              </div>
                             </div>
-                          </div>
+                          </Fade>
                         </div>
                       )
                     })
@@ -55,7 +59,7 @@ function Categories({ data }) {
 
             </div>
           </div>
-        </section >
+        </section>
       )
     })
   )

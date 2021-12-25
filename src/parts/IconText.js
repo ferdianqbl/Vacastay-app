@@ -3,7 +3,7 @@ import React from 'react'
 
 function IconText(props) {
   return (
-    <Button className={`brand-text-icon`} href="" type="link" >
+    <Button className={`brand-text-icon`} href={props.link} type="link" >
       Vaca<span className="text-gray-900">stay.</span>
     </Button>
   )
