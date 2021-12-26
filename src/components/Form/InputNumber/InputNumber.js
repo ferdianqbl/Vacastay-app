@@ -37,6 +37,7 @@ const InputNumber = (props) => {
     value > min &&
       handleOnChange({
         target: {
+          name,
           value: +value - 1,
         },
       });
@@ -45,6 +46,7 @@ const InputNumber = (props) => {
     value < max &&
       handleOnChange({
         target: {
+          name,
           value: +value + 1,
         },
       });
