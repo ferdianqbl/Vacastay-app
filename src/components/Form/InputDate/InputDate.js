@@ -16,7 +16,7 @@ const InputDate = (props) => {
     const target = {
       target: {
         value: value.selection,
-        name,
+        name: name,
       },
     };
 

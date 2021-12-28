@@ -1,19 +1,21 @@
-import React, { useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
-import Navbar from 'parts/Navbar';
-import Hero from 'parts/Hero';
-import landingPage from '../json/landingPage.json';
-import MostPicked from 'parts/MostPicked';
-import Categories from 'parts/Categories';
-import Testimony from 'parts/Testimony';
-import Footer from 'parts/Footer';
-
+import Navbar from "parts/Navbar";
+import Hero from "parts/Hero";
+import landingPage from "../json/landingPage.json";
+import MostPicked from "parts/MostPicked";
+import Categories from "parts/Categories";
+import Testimony from "parts/Testimony";
+import Footer from "parts/Footer";
 
 const LandingPage = () => {
   const location = useLocation();
   // console.log(location);
-  document.title = "Vacastay | Home";
+
+  useEffect(() => {
+    document.title = "Vacastay | Home";
+  }, []);
 
   const refMostPicked = useRef();
 
@@ -26,7 +28,7 @@ const LandingPage = () => {
       <Testimony data={landingPage.testimonial} />
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default LandingPage;

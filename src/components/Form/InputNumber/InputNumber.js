@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import propTypes from "prop-types";
 import "./InputNumber.scss";
 
@@ -6,30 +6,22 @@ const InputNumber = (props) => {
   const { value, placeholder, name, min, max, prefix, suffix, isSuffixPlural } =
     props;
 
-  const [inputValue, setInputValue] = useState(
-    `${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? "s" : ""}`
-  );
-
   const handleOnChange = (e) => {
     let val = String(e.target.value);
 
     // if (prefix) val = val.replace(prefix, "");
     // if (suffix) val = val.replace(suffix, "");
 
-    const patternNumeric = new RegExp("[0-9]*");
-    const isNumeric = patternNumeric.test(val);
+    // const patternNumeric = new RegExp("[0-9]*");
+    // const isNumeric = patternNumeric.test(val);
 
-    if (isNumeric && +val <= max && +val >= min) {
+    if (+val <= max && +val >= min) {
       props.onChange({
         target: {
           name,
           value: +val,
         },
       });
-
-      setInputValue(
-        `${prefix}${val}${suffix}${isSuffixPlural && val > 1 ? "s" : ""}`
-      );
     }
   };
 
@@ -65,10 +57,12 @@ const InputNumber = (props) => {
           min={min}
           max={max}
           name={name}
-          pattern="[0-9]*"
+          readOnly
           className="form-control"
           placeholder={placeholder ? placeholder : "0"}
-          value={String(inputValue)}
+          value={`${prefix}${value}${suffix}${
+            isSuffixPlural && value > 1 ? "s" : ""
+          }`}
           onChange={handleOnChange}
         />
 

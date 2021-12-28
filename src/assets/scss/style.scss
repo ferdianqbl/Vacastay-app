@@ -168,9 +168,11 @@ nav#navbar {
 }
 
 .card {
-  height: 100%;
+  &.bordered {
+    border: 1px solid #E0F3F0;
+  }
+
   border: none;
-  overflow: hidden;
   border-radius: 20px;
 
   .tag {
@@ -352,6 +354,60 @@ section.hero#hero {
           }
         }
       }
+    }
+  }
+}
+
+section.page-details#page-details {
+  padding-top: 9rem;
+
+  h4.feature-heading {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .page-details-text {
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: #B0B0B0;
+  }
+
+  .page-details-desc {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #B0B0B0;
+  }
+
+  .feature-qty {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .feature-name {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #B0B0B0;
+  }
+
+  .booking-big-text {
+    font-weight: 500;
+    font-size: 2.25rem;
+    color: #2B4CDE;
+
+    span {
+      font-weight: 200;
+      color: #B0B0B0;
+    }
+  }
+
+  .booking-text {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #B0B0B0;
+
+    span {
+      font-weight: 500;
+      color: #152C5B;
     }
   }
 }
