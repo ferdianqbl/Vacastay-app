@@ -1,0 +1,36 @@
+$size: 3.125rem;
+
+ol.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    color: #ffffff;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    background-image: url('data:image/svg+xml;utf8,<svg width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 11L10.389 21.9926C11.1714 23.0179 12.7053 23.0455 13.5241 22.0491L30 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1abc9c;
+    transform: scale(1);
+    transition: 0.35s transform ease-in-out;
+  }
+}
