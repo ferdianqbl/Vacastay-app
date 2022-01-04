@@ -8,6 +8,22 @@ function Navbar(props) {
     return props.location === path ? " active" : "";
   };
 
+  if (props.isCentered) {
+    return (
+      <nav
+        className="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+        id="navbar"
+        role="navigation"
+      >
+        <div className="container">
+          <Button className="brand-text-icon mx-auto" href="" type="link">
+            Vaca<span className="text-gray-900">stay.</span>
+          </Button>
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light bg-light fixed-top"

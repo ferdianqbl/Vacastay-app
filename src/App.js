@@ -8,6 +8,7 @@ import BrowseBy from "pages/BrowseBy";
 import Stories from "pages/Stories";
 import Agents from "pages/Agents";
 import Test from "pages/Test";
+import Checkout from "pages/Checkout";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/agents" element={<Agents />} />
         <Route path="/stories" element={<Stories />} />
         <Route path="/properties/:id" element={<PageDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/test" element={<Test />} />
       </Routes>
     </div>
