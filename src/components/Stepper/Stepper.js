@@ -29,3 +29,7 @@ Stepper.propTypes = {
 };
 
 export default Stepper;
+export { MainContent } from "./MainContent/MainContent";
+export { Controller } from "./Controller/Controller";
+export { Meta } from "./Meta/Meta";
+export { Numbering } from "./Numbering/Numbering";
