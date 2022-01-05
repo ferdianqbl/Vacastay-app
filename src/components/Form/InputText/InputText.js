@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./InputText.scss";
 import propTypes from "prop-types";
 
-const InputText = () => {
+const InputText = (props) => {
   const {
     value,
     type,
@@ -14,6 +14,8 @@ const InputText = () => {
     inputClassName,
     errorResponse,
   } = props;
+
+  // console.log(value);
 
   const [hasError, setHasError] = useState(null);
   let pattern = "";
@@ -35,8 +37,7 @@ const InputText = () => {
 
     if (type === "tel") {
       if (e.target.validity.valid) props.onChange(target);
-      else props.onChange(target);
-    }
+    } else props.onChange(target);
   };
 
   return (

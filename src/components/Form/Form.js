@@ -1,4 +1,4 @@
-export { InputDate } from "./InputDate/InputDate";
-export { InputFile } from "./InputFile/InputFile";
-export { InputNumber } from "./InputNumber/InputNumber";
-export { InputText } from "./InputText/InputText";
+export { default as InputDate } from "./InputDate/InputDate";
+export { default as InputFile } from "./InputFile/InputFile";
+export { default as InputNumber } from "./InputNumber/InputNumber";
+export { default as InputText } from "./InputText/InputText";

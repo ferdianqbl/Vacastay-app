@@ -1,13 +1,13 @@
 .btn-primary {
-  background: #30E4C9;
+  background: #30e4c9;
   color: white;
   border: none;
-  transition: all .5s;
-  opacity: .7;
+  transition: all 0.5s;
+  opacity: 0.7;
   position: relative;
 
   &:hover {
-    background: #30E4C9;
+    background: #30e4c9;
     opacity: 1;
     top: -2px;
   }
@@ -16,11 +16,20 @@
   &:active,
   &.active,
   &.active:focus {
-    background: #30E4C9;
-    box-shadow: 0px 8px 20px 0px #30E4C980;
+    background: #30e4c9;
+    box-shadow: 0px 8px 20px 0px #30e4c980;
   }
 }
 
 .btn-shadow {
-  box-shadow: 0px 8px 20px 0px #30E4C980;
+  box-shadow: 0px 8px 20px 0px #30e4c980;
+}
+
+.btn-block {
+  display: block !important;
+  text-align: center;
+}
+
+.btn-light {
+  background: #f5f6f8;
 }

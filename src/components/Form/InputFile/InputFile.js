@@ -12,10 +12,19 @@ const InputFile = (props) => {
     append,
     outerClassName,
     inputClassName,
-    onChange,
   } = props;
 
   const refInputFile = useRef(null);
+
+  const onChange = (e) => {
+    setFileName(e.target.value);
+    props.onChange({
+      target: {
+        name: e.target.name,
+        value: e.target.files,
+      },
+    });
+  };
 
   return (
     <div className={["input-text mb-3", outerClassName].join(" ")}>
@@ -33,7 +42,7 @@ const InputFile = (props) => {
           name={name}
           className="d-none"
           type="file"
-          value={FileName}
+          value={fileName}
           onChange={onChange}
         />
 

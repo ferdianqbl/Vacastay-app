@@ -24,7 +24,7 @@ function Button(props) {
       <span className={className.join(" ")} style={props.style}>
         {props.isLoading ? (
           <>
-            <span className="spinner-border spinner-border-sm mx5"></span>
+            <span className="spinner-border spinner-border-sm mx-5"></span>
             <span className="sr-only">Loading...</span>
           </>
         ) : (
@@ -63,6 +63,19 @@ function Button(props) {
   }
 
   // jika bukan type link
+  if (props.isBlock) {
+    return (
+      <div className="d-grid gap-2">
+        <button
+          className={className.join(" ")}
+          style={props.style}
+          onClick={onClick}
+        >
+          {props.children}
+        </button>
+      </div>
+    );
+  }
   return (
     <button
       className={className.join(" ")}

@@ -1,8 +1,13 @@
 import React from "react";
-import { Fade } from "react-awesome-reveal";
+// import { Fade } from "react-awesome-reveal";
 
 const MainContent = ({ data, current }) => {
-  return <Fade cascade>{data[current] && data[current].content}</Fade>;
+  // console.log(data[current]);
+  // console.log(data[current].content);
+  // console.log(data, current);
+  return (
+    <div className="main-content">{data[current] && data[current].content}</div>
+  );
 };
 
 export default MainContent;
