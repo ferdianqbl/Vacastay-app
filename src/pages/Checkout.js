@@ -89,12 +89,6 @@ class Checkout extends Component {
         <Navbar isCentered />
         <Stepper steps={steps}>
           {(prevStep, nextStep, CurrentStep, steps) => {
-            {
-              {
-                /* console.log(CurrentStep);
-              console.log(steps); */
-              }
-            }
             return (
               <>
                 <Numbering
@@ -172,7 +166,7 @@ class Checkout extends Component {
                       isBlock
                       isPrimary
                       hasShadow
-                      href=""
+                      href="/"
                     >
                       Back to Home
                     </Button>

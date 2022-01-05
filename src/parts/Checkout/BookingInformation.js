@@ -1,5 +1,6 @@
 import React from "react";
 import { InputText } from "components/Form/Form";
+import "./Checkout.scss";
 // import { Fade } from "react-awesome-reveal";
 
 const BookingInformation = (props) => {
@@ -28,17 +29,19 @@ const BookingInformation = (props) => {
             <div className="row align-items-center">
               <div className="col">
                 <div className="meta-wrapper">
-                  <h5>{itemDetails.name}</h5>
-                  <span className="text-gray-500">
+                  <h5 style={{ fontSize: "1.5rem", lineHeight: "2.25rem" }}>
+                    {itemDetails.name}
+                  </h5>
+                  <span className="text-gray" style={{ fontSize: "1.125rem" }}>
                     {itemDetails.city}, {itemDetails.country}
                   </span>
                 </div>
               </div>
 
               <div className="col-auto">
-                <span>
+                <span className="checkout-item-price-text">
                   ${+checkout.duration * itemDetails.price} USD
-                  <span className="text-gray-500">per</span>
+                  <span className="text-gray"> per </span>
                   {checkout.duration} {itemDetails.unit}
                   {+checkout.duration > 1 ? "s" : ""}
                 </span>
@@ -48,7 +51,9 @@ const BookingInformation = (props) => {
         </div>
 
         <div className="col-md-5 py-5" style={{ paddingLeft: "5rem" }}>
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName" className="checkout-label">
+            First Name
+          </label>
           <InputText
             id="firstName"
             name="firstName"
@@ -56,7 +61,9 @@ const BookingInformation = (props) => {
             onChange={props.onChange}
           />
 
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName" className="checkout-label">
+            Last Name
+          </label>
           <InputText
             id="lastName"
             name="lastName"
@@ -64,7 +71,9 @@ const BookingInformation = (props) => {
             onChange={props.onChange}
           />
 
-          <label htmlFor="email">Email Address</label>
+          <label htmlFor="email" className="checkout-label">
+            Email Address
+          </label>
           <InputText
             id="email"
             name="email"
@@ -73,7 +82,9 @@ const BookingInformation = (props) => {
             onChange={props.onChange}
           />
 
-          <label htmlFor="phone">Phone Number</label>
+          <label htmlFor="phone" className="checkout-label">
+            Phone Number
+          </label>
           <InputText
             id="phone"
             name="phone"

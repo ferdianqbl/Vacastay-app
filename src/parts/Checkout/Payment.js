@@ -1,5 +1,6 @@
 import React from "react";
 import { InputText, InputFile } from "components/Form/Form";
+import "./Checkout.scss";
 
 import BCALogo from "../../assets/images/bca-logo.png";
 import MandiriLogo from "../../assets/images/mandiri-logo.png";

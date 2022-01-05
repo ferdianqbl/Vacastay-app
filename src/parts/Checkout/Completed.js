@@ -1,6 +1,7 @@
 import React from "react";
 // import { Fade } from "react-awesome-reveal";
 import completedIllustration from "../../assets/images/completed-illustration.png";
+import "./Checkout.scss";
 
 const Completed = () => {
   return (
@@ -17,7 +18,7 @@ const Completed = () => {
             className="img-fluid"
           />
 
-          <p className="text-gray-500">
+          <p className="text-gray" style={{ marginTop: "1.25rem" }}>
             We will inform you via email later once the transaction has been
             accepted
           </p>

@@ -1,0 +1,28 @@
+.text-gray {
+  color: #b0b0b0;
+}
+
+.checkout-item-price-text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 170%;
+  color: #152c5b;
+
+  span {
+    font-weight: 300;
+  }
+}
+
+.checkout-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 170%;
+  color: #152C5B;
+  margin-bottom: .625rem;
+}
+
+.checkout-input {
+  background: #F5F6F8;
+  border-radius: 5px;
+}
