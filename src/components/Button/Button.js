@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
-import './Button.scss';
+import "./Button.scss";
 
 function Button(props) {
   const className = [props.className];
   if (props.isPrimary) className.push("btn-primary");
+  if (props.isLight) className.push("btn-light");
   if (props.isLarge) className.push("btn-lg");
   if (props.isSmall) className.push("btn-sm");
   if (props.isBlock) className.push("btn-block");
@@ -77,15 +78,17 @@ function Button(props) {
 Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
   onClick: propTypes.func,
-  target: propTypes.string,
   href: propTypes.string,
+  target: propTypes.string,
   className: propTypes.string,
+  isPrimary: propTypes.bool,
+  isLight: propTypes.bool,
+  isExternal: propTypes.bool,
   isDisabled: propTypes.bool,
   isLoading: propTypes.bool,
   isSmall: propTypes.bool,
   isLarge: propTypes.bool,
   isBlock: propTypes.bool,
-  isExternal: propTypes.bool,
   hasShadow: propTypes.bool,
 };
 

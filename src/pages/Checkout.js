@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import {
   Numbering,
   Meta,
-  MainComponent,
+  MainContent,
   Controller,
 } from "../components/Stepper/Stepper";
 
@@ -84,7 +84,97 @@ class Checkout extends Component {
     return (
       <>
         <Navbar isCentered />
-        <Stepper steps={steps}></Stepper>
+        <Stepper steps={steps}>
+          {(prevStep, nextStep, currentStep, steps) => {
+            <>
+              <Numbering
+                data={steps}
+                current={currentStep}
+                style={{ marginBottom: "3.125rem" }}
+              />
+
+              <Meta data={steps} current={currentStep} />
+
+              <MainContent data={steps} current={currentStep} />
+
+              {currentStep === "bookingInformation" && (
+                <Controller>
+                  {data.firstName !== "" &&
+                    data.lastName !== "" &&
+                    data.email !== "" &&
+                    data.phone !== "" && (
+                      <Fade>
+                        <Button
+                          className="btn mb-3"
+                          type="button"
+                          isBlock
+                          isPrimary
+                          hasShadow
+                          onClick={nextStep}
+                        >
+                          Continue to Book
+                        </Button>
+                      </Fade>
+                    )}
+                  <Button
+                    className="btn"
+                    type="link"
+                    isBlock
+                    isLight
+                    href={`/properties/${checkout._id}`}
+                  >
+                    Cancel
+                  </Button>
+                </Controller>
+              )}
+
+              {currentStep === "payment" && (
+                <Controller>
+                  {data.proofPayment !== "" &&
+                    data.bankName !== "" &&
+                    data.bankHolder !== "" && (
+                      <Fade>
+                        <Button
+                          className="btn mb-3"
+                          type="button"
+                          isBlock
+                          isPrimary
+                          hasShadow
+                          onClick={() => this._Submit(nextStep)}
+                        >
+                          Continue to Book
+                        </Button>
+                      </Fade>
+                    )}
+                  <Button
+                    className="btn"
+                    type="button"
+                    isBlock
+                    isLight
+                    onClick={prevStep}
+                  >
+                    Cancel
+                  </Button>
+                </Controller>
+              )}
+
+              {currentStep === "completed" && (
+                <Controller>
+                  <Button
+                    className="btn"
+                    type="link"
+                    isBlock
+                    isPrimary
+                    hasShadow
+                    href=""
+                  >
+                    Back to Home
+                  </Button>
+                </Controller>
+              )}
+            </>;
+          }}
+        </Stepper>
       </>
     );
   }
