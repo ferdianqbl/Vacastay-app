@@ -1,3 +1,6 @@
+import { connect } from "react-redux";
+import { checkoutBooking } from "../store/actions/checkout";
+
 import Button from "components/Button/Button";
 import Navbar from "parts/Navbar";
 import React, { Component } from "react";
@@ -29,7 +32,7 @@ class Checkout extends Component {
   };
 
   onChange = (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
     this.setState({
       data: {
         ...this.state.data,
@@ -45,10 +48,28 @@ class Checkout extends Component {
 
   render() {
     const { data } = this.state;
+    const { checkout } = this.props;
 
-    const checkout = {
-      duration: 3,
-    };
+    if (!checkout) {
+      return (
+        <div
+          className="row align-items-center justify-content-center text-center"
+          style={{ height: "100vh" }}
+        >
+          <div className="col-3">
+            Choose your room first before checkout
+            <div>
+              <Button className="btn mt-5" type="link" href="/" isLight>
+                Back
+              </Button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    // const checkout = {
+    //   duration: 3,
+    // };
 
     const steps = {
       bookingInformation: {
@@ -181,4 +202,8 @@ class Checkout extends Component {
   }
 }
 
-export default Checkout;
+const mapStateToProps = (state) => ({
+  checkout: state.checkout,
+});
+
+export default connect(mapStateToProps)(Checkout);

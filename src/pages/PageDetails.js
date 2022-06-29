@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { connect } from "react-redux";
 
 import Navbar from "parts/Navbar";
 import PageDetailsTitle from "parts/PageDetailsTitle";
@@ -11,7 +12,9 @@ import Categories from "parts/Categories";
 import Testimony from "parts/Testimony";
 import Footer from "parts/Footer";
 
-const PageDetails = () => {
+import { checkoutBooking } from "../store/actions/checkout";
+
+const PageDetails = (props) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -35,7 +38,10 @@ const PageDetails = () => {
               <PageDetailsDescription data={pageDetails} />
             </div>
             <div className="col-md-5">
-              <BookingForm itemDetails={pageDetails} />
+              <BookingForm
+                itemDetails={pageDetails}
+                startBooking={props.checkoutBooking}
+              />
             </div>
           </div>
         </div>
@@ -48,4 +54,4 @@ const PageDetails = () => {
   );
 };
 
-export default PageDetails;
+export default connect(null, { checkoutBooking })(PageDetails);

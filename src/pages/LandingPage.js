@@ -18,6 +18,7 @@ const LandingPage = () => {
   }, []);
 
   const refMostPicked = useRef();
+  console.log(refMostPicked);
 
   return (
     <>
